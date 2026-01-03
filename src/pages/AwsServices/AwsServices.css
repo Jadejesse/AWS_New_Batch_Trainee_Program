@@ -1,0 +1,420 @@
+.aws-services {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  color: white;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.aws-services .particle-effect-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.aws-services h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #FFD700;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.layers-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service-layer {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid rgba(0, 240, 255, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.layer-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Layer number removed - no longer displayed */
+
+.layer-header h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.layer-description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0.5rem 0 0 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.service-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(255, 215, 0, 0.5));
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Bedrock Section */
+.bedrock-section {
+  max-width: 1400px;
+  margin: 4rem auto 3rem;
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  border: 3px solid rgba(0, 240, 255, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.bedrock-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #FFD700;
+}
+
+.bedrock-content {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.bedrock-problem,
+.bedrock-solution,
+.bedrock-capabilities,
+.bedrock-infrastructure,
+.bedrock-dco {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 240, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.bedrock-problem h3,
+.bedrock-solution h3,
+.bedrock-capabilities h3,
+.bedrock-infrastructure h3,
+.bedrock-dco h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.bedrock-problem ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.bedrock-problem li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.bedrock-problem li::before {
+  content: '✗';
+  position: absolute;
+  left: 0;
+  color: #ff6b6b;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.problem-conclusion {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  color: #FFD700;
+}
+
+.solution-intro {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.analogy-box {
+  background: rgba(255, 215, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #FFD700;
+}
+
+.analogy-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.analogy-box p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.analogy-note {
+  margin-top: 1rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.capability-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.capability-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.capability-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.capability-item h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.capability-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.security-note {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  border: 2px solid rgba(74, 222, 128, 0.4);
+}
+
+.infra-intro {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.infra-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.infra-list li {
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.infra-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-size: 1.3rem;
+}
+
+.bedrock-dco {
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+}
+
+.dco-message {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.dco-impact {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.dco-conclusion {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-top: 1.5rem;
+}
+
+.ml-note {
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  text-align: center;
+}
+
+.ml-note h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ml-note p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Animated Background - Hidden to show CyberpunkBg */
+.animated-background {
+  display: none;
+}
+
+.gradient-orb {
+  display: none;
+}
+
+.back-button,
+.aws-services h1,
+.intro,
+.layers-container,
+.bedrock-section,
+.ml-note {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-title {
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B6B, #FFD700);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Konami feature removed */

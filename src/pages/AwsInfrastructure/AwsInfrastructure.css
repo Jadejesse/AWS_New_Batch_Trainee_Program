@@ -1,0 +1,542 @@
+.aws-infrastructure {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  color: white;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.aws-infrastructure .particle-effect-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.aws-infrastructure h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Key Concept */
+.key-concept {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.key-concept h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.concept-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+
+.concept-text strong {
+  color: #FFE66D;
+  font-weight: 900;
+}
+
+/* Layers Section */
+.layers-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.layer-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 3px solid;
+  position: relative;
+}
+
+.layer-card.region {
+  border-color: rgba(74, 222, 128, 0.6);
+  background: rgba(74, 222, 128, 0.1);
+}
+
+.layer-card.az {
+  border-color: rgba(59, 130, 246, 0.6);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.layer-card.datacenter {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: rgba(255, 215, 0, 0.1);
+}
+
+.layer-number {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+}
+
+.layer-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #FFE66D;
+}
+
+.layer-definition {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.layer-definition strong {
+  color: #FFE66D;
+}
+
+.layer-details h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.layer-details ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.layer-details li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.layer-details li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #FFE66D;
+}
+
+.layer-note {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.layer-note p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.dco-highlight {
+  background: rgba(255, 215, 0, 0.3);
+  border: 2px solid rgba(255, 215, 0, 0.6);
+}
+
+/* Hierarchy Visual */
+.hierarchy-section {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.hierarchy-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.hierarchy-visual {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hierarchy-level {
+  text-align: center;
+}
+
+.hierarchy-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hierarchy-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.hierarchy-arrow {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFE66D;
+}
+
+/* Example Section */
+.example-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.example-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.example-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.example-item {
+  text-align: center;
+}
+
+.example-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.example-item p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFE66D;
+  margin: 0;
+}
+
+.example-note {
+  grid-column: 1 / -1;
+  padding: 1.5rem;
+  background: rgba(255, 230, 109, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.example-note p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Why Matters */
+.why-matters-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.why-matters-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.matters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.matter-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.matter-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.matter-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFE66D;
+}
+
+.matter-card p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* DCO Role */
+.dco-role-section {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.dco-role-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.dco-role-box {
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.role-intro {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.role-intro strong {
+  color: #FFE66D;
+}
+
+.role-responsibilities {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.responsibility {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.resp-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.responsibility h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #FFE66D;
+}
+
+.responsibility p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Global Scale */
+.global-scale-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.global-scale-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.scale-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFE66D;
+  margin-bottom: 1rem;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.scale-note {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  background: rgba(255, 230, 109, 0.2);
+  border-radius: 12px;
+}
+
+/* Summary */
+.summary-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.summary-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.summary-box p {
+  font-size: 1.2rem;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+
+.summary-highlight {
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+.summary-highlight strong {
+  color: #FFE66D;
+  font-weight: 900;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .aws-infrastructure h1 {
+    font-size: 2rem;
+  }
+  
+  .example-box,
+  .matters-grid,
+  .scale-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Animated Background - Hidden to show CyberpunkBg */
+.animated-background {
+  display: none;
+}
+
+.gradient-orb {
+  display: none;
+}
+
+.back-button,
+.aws-infrastructure h1,
+.subtitle,
+.key-concept,
+.layers-section,
+.hierarchy-section,
+.example-section,
+.why-matters-section,
+.dco-role-section,
+.global-scale-section,
+.summary-section {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-title {
+  background: linear-gradient(45deg, #FFE66D, #FFA500, #FF6B6B, #FFE66D);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

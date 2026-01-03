@@ -1,0 +1,196 @@
+/* Global Presentation-Ready Text Styles for Cyber Background */
+
+/* Main Titles - High Contrast, Neon Glow */
+.fancy-title {
+  background: linear-gradient(135deg, #00f0ff 0%, #00aaff 50%, #ff00ff 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 4s ease-in-out infinite;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 
+    0 0 20px rgba(0, 240, 255, 0.6),
+    0 0 40px rgba(0, 170, 255, 0.4),
+    0 0 60px rgba(255, 0, 255, 0.3);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 20px rgba(0, 240, 255, 0.6));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 30px rgba(255, 0, 255, 0.8));
+  }
+}
+
+/* Subtitles - High Contrast White */
+.subtitle,
+.intro,
+.layer-description {
+  color: #ffffff !important;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 10px rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+/* Key Insight / Highlight Text */
+.highlight,
+strong {
+  color: #00f0ff !important;
+  font-weight: 800;
+  text-shadow: 
+    0 0 10px rgba(0, 240, 255, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.5),
+    0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+/* Section Headers (h2) */
+h2 {
+  color: #ffffff !important;
+  text-shadow: 
+    0 2px 6px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(255, 255, 255, 0.2);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Card Titles (h3) */
+h3 {
+  color: #00f0ff !important;
+  text-shadow: 
+    0 0 8px rgba(0, 240, 255, 0.7),
+    0 2px 4px rgba(0, 0, 0, 0.9);
+  font-weight: 700;
+}
+
+/* Body Text - High Contrast */
+p,
+li,
+td,
+th {
+  color: #f0f0f0 !important;
+  text-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.9),
+    0 0 5px rgba(255, 255, 255, 0.1);
+  line-height: 1.7;
+}
+
+/* Cards - Enhanced Visibility */
+.service-card,
+.service-layer,
+.layer-card,
+.key-definition,
+.key-concept,
+.key-message,
+.key-conclusion {
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 240, 255, 0.3) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 240, 255, 0.2),
+    inset 0 0 20px rgba(0, 240, 255, 0.05);
+}
+
+.service-card:hover,
+.layer-card:hover {
+  border-color: rgba(0, 240, 255, 0.6) !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.9),
+    0 0 30px rgba(0, 240, 255, 0.4),
+    inset 0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+/* Back Button - Enhanced */
+.back-button {
+  background: rgba(0, 240, 255, 0.2) !important;
+  color: #00f0ff !important;
+  border: 2px solid rgba(0, 240, 255, 0.4) !important;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+}
+
+.back-button:hover {
+  background: rgba(0, 240, 255, 0.35) !important;
+  border-color: rgba(0, 240, 255, 0.7) !important;
+  box-shadow: 0 6px 20px rgba(0, 240, 255, 0.5);
+  text-shadow: 0 0 15px rgba(0, 240, 255, 1);
+}
+
+/* Tables - Enhanced Readability */
+table {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(0, 240, 255, 0.3);
+}
+
+th {
+  background: rgba(0, 240, 255, 0.2) !important;
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+td {
+  border-color: rgba(0, 240, 255, 0.2) !important;
+}
+
+/* Lists - Enhanced */
+ul li::before,
+ol li::before {
+  color: #00f0ff !important;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+/* Service Icons - Enhanced Glow */
+.service-icon {
+  filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.6)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.8));
+}
+
+/* Layer Header - Enhanced */
+.layer-header {
+  border-bottom: 3px solid rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 0 4px 10px rgba(0, 240, 255, 0.2);
+}
+
+.layer-header h2 {
+  color: #00f0ff !important;
+  text-shadow: 
+    0 0 15px rgba(0, 240, 255, 0.8),
+    0 0 30px rgba(0, 240, 255, 0.4),
+    0 2px 6px rgba(0, 0, 0, 0.9);
+}
+
+/* Summary Boxes - Enhanced */
+.summary-box,
+.message-box,
+.definition-box,
+.concept-box {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid rgba(0, 240, 255, 0.4) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(0, 240, 255, 0.3);
+}
+
+/* Responsive - Ensure readability on all screens */
+@media (max-width: 768px) {
+  .fancy-title {
+    font-size: 2rem !important;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  p, li {
+    font-size: 0.95rem !important;
+  }
+}
+

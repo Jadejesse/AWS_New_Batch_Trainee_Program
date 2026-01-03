@@ -1,0 +1,670 @@
+.what-is-aws {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  animation: fadeIn 0.5s ease-out;
+  color: white;
+  overflow: hidden;
+}
+
+.what-is-aws .particle-effect-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Animated Background - Hidden to show CyberpunkBg */
+.animated-background {
+  display: none;
+}
+
+.gradient-orb {
+  display: none;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.back-button,
+.what-is-aws h1,
+.subtitle,
+.key-definition,
+.comparison-section,
+.analogy-section,
+.not-section,
+.customers-section,
+.core-capabilities,
+.benefits-section,
+.amazon-connection,
+.work-summary,
+.advantages-section {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-title {
+  background: linear-gradient(45deg, #FFE66D, #FFA500, #FF6B6B, #FFE66D);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.what-is-aws h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Key Definition */
+.key-definition {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.key-definition h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FFE66D;
+}
+
+.definition-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.definition-text strong {
+  color: #FFE66D;
+  font-weight: 900;
+}
+
+.definition-note {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Comparison Section */
+.comparison-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.comparison-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+.comparison-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.comparison-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+.result {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.result.bad {
+  background: rgba(255, 107, 107, 0.2);
+  border-left: 4px solid #ff6b6b;
+}
+
+.result.good {
+  background: rgba(74, 222, 128, 0.2);
+  border-left: 4px solid #4ade80;
+}
+
+/* Analogy Section */
+.analogy-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.analogy-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.analogy-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.supermarket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.supermarket-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.supermarket-item:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.item-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.supermarket-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #FFE66D;
+}
+
+.supermarket-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.pay-model {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  background: rgba(255, 230, 109, 0.2);
+  border-radius: 12px;
+  color: #FFE66D;
+}
+
+/* What AWS is NOT */
+.not-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.not-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.not-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.not-item {
+  background: rgba(255, 107, 107, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 107, 107, 0.4);
+}
+
+.not-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.correct-definition {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  background: rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  border: 2px solid rgba(74, 222, 128, 0.4);
+}
+
+.correct-definition strong {
+  color: #4ade80;
+}
+
+/* Customers Section */
+.customers-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.customers-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.customers-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.customers-intro strong {
+  color: #FFE66D;
+}
+
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.customer-type {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.customer-type:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.customer-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.customer-type p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.examples-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.examples-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFE66D;
+}
+
+.examples-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.examples-box li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.examples-box li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #FFE66D;
+}
+
+.examples-note {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 1rem;
+  background: rgba(255, 230, 109, 0.2);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Core Capabilities */
+.core-capabilities {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.core-capabilities h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.capabilities-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.capability-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.capability-number {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.capability-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #FFE66D;
+}
+
+.capability-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.summary-line {
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+  background: rgba(255, 230, 109, 0.2);
+  border-radius: 12px;
+}
+
+.summary-line strong {
+  color: #FFE66D;
+}
+
+/* Benefits Section */
+.benefits-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.benefits-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #FFE66D;
+}
+
+.benefit-card p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* Amazon Connection */
+.amazon-connection {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.amazon-connection h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.connection-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #FFE66D;
+}
+
+.connection-note {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Work Summary */
+.work-summary {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.work-summary h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  background: rgba(255, 230, 109, 0.2);
+  border: 3px solid rgba(255, 230, 109, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.summary-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0;
+}
+
+.summary-text strong {
+  color: #FFE66D;
+  font-weight: 900;
+}
+
+/* Advantages Section */
+.advantages-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.advantages-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.advantage-item {
+  background: rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid rgba(74, 222, 128, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .what-is-aws h1 {
+    font-size: 2rem;
+  }
+  
+  .comparison-grid,
+  .capabilities-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .supermarket-grid,
+  .customers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

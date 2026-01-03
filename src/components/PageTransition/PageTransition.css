@@ -1,0 +1,21 @@
+.page-content {
+  transition: opacity 0.25s ease-out;
+}
+
+.page-transitioning {
+  opacity: 0;
+}
+
+.page-visible {
+  opacity: 1;
+  animation: pageFadeIn 0.25s ease-out;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

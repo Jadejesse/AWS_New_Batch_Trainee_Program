@@ -1,0 +1,636 @@
+.dco-importance {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  color: white;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.dco-importance .particle-effect-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.dco-importance h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Key Definition */
+.key-definition {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.key-definition h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.definition-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.definition-text strong {
+  color: #FFD700;
+  font-weight: 900;
+}
+
+.definition-note {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Analogy Section */
+.analogy-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.analogy-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.analogy-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.analogy-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.analogy-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.analogy-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.analogy-card li {
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.analogy-card strong {
+  color: #FFD700;
+}
+
+.analogy-note {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* What We Do Section */
+.what-we-do-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.what-we-do-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.tasks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.task-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.task-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.task-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.task-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Critical Section */
+.critical-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.critical-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.critical-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.impact-card {
+  border-radius: 20px;
+  padding: 2rem;
+  border: 3px solid;
+}
+
+.impact-card.severe {
+  background: rgba(255, 107, 107, 0.2);
+  border-color: rgba(255, 107, 107, 0.6);
+}
+
+.impact-card.financial {
+  background: rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.6);
+}
+
+.impact-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.impact-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.impact-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.impact-card li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.impact-note {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+/* Numbers Section */
+.numbers-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.numbers-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.number-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.big-number {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.number-label {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+.scale-note {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+}
+
+/* Trust Section */
+.trust-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.trust-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.trust-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.trust-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.trust-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Examples Section */
+.examples-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.examples-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.example-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.example-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.example-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.example-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Career Section */
+.career-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.career-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.career-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.career-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.career-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: #FFD700;
+}
+
+.career-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Principles Section */
+.principles-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.principles-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.principle-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.principle-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.principle-card p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Summary Section */
+.summary-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.summary-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.summary-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0;
+}
+
+.summary-text strong {
+  color: #FFD700;
+  font-weight: 900;
+}
+
+/* Final Message */
+.final-message {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.final-message h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.message-box {
+  background: rgba(255, 255, 255, 0.15);
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.message-box p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-text {
+  font-size: 1.5rem;
+  color: #FFD700;
+  font-weight: 900;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .dco-importance h1 {
+    font-size: 2rem;
+  }
+  
+  .tasks-grid,
+  .impact-grid,
+  .numbers-grid,
+  .trust-grid,
+  .example-grid,
+  .career-grid,
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Animated Background - Hidden to show CyberpunkBg */
+.animated-background {
+  display: none;
+}
+
+.gradient-orb {
+  display: none;
+}
+
+.back-button,
+.dco-importance h1,
+.subtitle,
+.key-definition,
+.analogy-section,
+.what-we-do-section,
+.critical-section,
+.numbers-section,
+.trust-section,
+.examples-section,
+.career-section,
+.principles-section,
+.summary-section,
+.final-message {
+  position: relative;
+  z-index: 1;
+}
+
+.fancy-title {
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B6B, #FFD700);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}

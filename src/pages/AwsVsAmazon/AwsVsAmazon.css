@@ -1,0 +1,636 @@
+.aws-vs-amazon {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  animation: fadeIn 0.5s ease-out;
+  color: white;
+  overflow: hidden;
+}
+
+.aws-vs-amazon .particle-effect-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* Animated Background - Hidden to show CyberpunkBg */
+.animated-background {
+  display: none;
+}
+
+.gradient-orb {
+  display: none;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.back-button,
+.aws-vs-amazon h1,
+.key-conclusion,
+.main-comparison,
+.analogy-section,
+.key-differences,
+.money-section,
+.misconceptions,
+.summary-section,
+.cloud-providers-section {
+  position: relative;
+  z-index: 1;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.aws-vs-amazon h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 1rem 0;
+  padding: 0;
+}
+
+.fancy-title {
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B6B, #FFD700);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+@keyframes gradientText {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Key Conclusion Section */
+.key-conclusion {
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.key-conclusion h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.conclusion-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.conclusion-text strong {
+  color: #FFD700;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* Main Comparison Cards */
+.main-comparison {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.comparison-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.comparison-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.card-intro {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.business-units {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.business-units li {
+  padding: 0.75rem 0;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.business-units .icon {
+  font-size: 1.5rem;
+}
+
+.highlight-box {
+  background: rgba(255, 215, 0, 0.2);
+  border-left: 4px solid #FFD700;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+/* Analogy Section */
+.analogy-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.analogy-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.analogy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.analogy-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.analogy-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.analogy-card p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.analogy-card strong {
+  color: #FFD700;
+}
+
+.examples {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.examples p {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.examples ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.examples li {
+  padding: 0.25rem 0;
+}
+
+/* Key Differences */
+.key-differences {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.key-differences h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.diff-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.diff-card.highlight {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.diff-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.diff-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.diff-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.diff-card li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+}
+
+.diff-card .note {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+  font-size: 1.05rem;
+}
+
+/* Money Section */
+.money-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.money-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.money-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.money-fact {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #FFD700;
+}
+
+.money-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.money-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.money-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.money-item li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.insight {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+/* Misconceptions */
+.misconceptions {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+}
+
+.misconceptions h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.misconception-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.misconception-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.misconception-item .wrong {
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.misconception-item .correct {
+  font-size: 1.1rem;
+  color: #4ade80;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* Summary Section */
+.summary-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.summary-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-box {
+  background: rgba(255, 215, 0, 0.15);
+  border: 3px solid rgba(255, 215, 0, 0.5);
+  border-radius: 20px;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.summary-box p {
+  margin-bottom: 1rem;
+}
+
+.summary-box strong {
+  color: #FFD700;
+  font-weight: 900;
+}
+
+/* Cloud Providers Section */
+.cloud-providers-section {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+  padding-top: 3rem;
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.cloud-providers-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.providers-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.provider-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.provider-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.provider-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.provider-icon {
+  font-size: 3rem;
+}
+
+.provider-header h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #FFD700;
+}
+
+.provider-full-name {
+  font-size: 1.1rem;
+  margin: 0.25rem 0;
+  opacity: 0.9;
+}
+
+.provider-company {
+  font-size: 0.95rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.market-share {
+  background: rgba(255, 215, 0, 0.2);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.provider-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+}
+
+.provider-content ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.provider-content li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.provider-content li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.key-services {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.comparison-note {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-note h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+}
+
+.comparison-note ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.comparison-note li {
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.comparison-note strong {
+  color: #FFD700;
+}
+
+.final-note {
+  padding: 1.5rem;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-comparison,
+  .analogy-grid,
+  .diff-grid,
+  .providers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .aws-vs-amazon h1 {
+    font-size: 2rem;
+  }
+  
+  .key-conclusion h2,
+  .analogy-section h2,
+  .key-differences h2,
+  .money-section h2,
+  .misconceptions h2,
+  .summary-section h2,
+  .cloud-providers-section h2 {
+    font-size: 2rem;
+  }
+}
