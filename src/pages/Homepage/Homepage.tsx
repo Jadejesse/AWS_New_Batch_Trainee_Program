@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import InfoPanel from '../../components/InfoPanel/InfoPanel';
+import Avatar from '../../components/Avatar/Avatar';
 import './Homepage.css';
 
 const Homepage: React.FC = () => {
@@ -99,6 +100,7 @@ const Homepage: React.FC = () => {
   return (
     <div className="homepage" style={{ ['--homepage-bg' as any]: `url('${homepageBg}')` }}>
       <canvas ref={canvasRef} className="homepage-particle-canvas" />
+      <Avatar />
       <div className="sidebar">
         <InfoPanel />
       </div>
