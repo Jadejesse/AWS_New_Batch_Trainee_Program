@@ -2,7 +2,7 @@
   "name": "aws-training-platform",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://YOUR_USERNAME.github.io/YOUR_REPO_NAME",
+  "homepage": "https://Jadejesse.github.io/AWS_New_Batch_Trainee_Program",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
