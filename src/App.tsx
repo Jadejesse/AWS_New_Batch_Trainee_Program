@@ -10,7 +10,7 @@ import PageTransition from './components/PageTransition/PageTransition'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/AWS_New_Batch_Trainee_Program">
       <PageTransition>
         <Routes>
           <Route path="/" element={<Homepage />} />
