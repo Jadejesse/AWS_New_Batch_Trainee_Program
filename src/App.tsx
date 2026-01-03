@@ -10,7 +10,7 @@ import PageTransition from './components/PageTransition/PageTransition'
 
 function App() {
   // Use basename only in production (GitHub Pages)
-  const basename = import.meta.env.PROD ? '/AWS_New_Batch_Trainee_Program' : ''
+  const basename = import.meta.env.MODE === 'production' ? '/AWS_New_Batch_Trainee_Program' : ''
   
   return (
     <Router basename={basename}>
