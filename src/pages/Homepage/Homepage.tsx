@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import InfoPanel from '../../components/InfoPanel/InfoPanel';
 import './Homepage.css';
 
 const Homepage: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const homepageBg = `${import.meta.env.BASE_URL}Homepage_image.png`;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -95,7 +97,7 @@ const Homepage: React.FC = () => {
   }, []);
 
   return (
-    <div className="homepage">
+    <div className="homepage" style={{ ['--homepage-bg' as any]: `url('${homepageBg}')` }}>
       <canvas ref={canvasRef} className="homepage-particle-canvas" />
       <div className="sidebar">
         <InfoPanel />
@@ -111,18 +113,18 @@ const Homepage: React.FC = () => {
         <div className="right-panel">
           <h3 className="panel-title">Learning Resources</h3>
           <div className="right-nav-buttons">
-            <a href="/aws-services" className="right-nav-button">
+            <Link to="/aws-services" className="right-nav-button">
               What are AWS Services
-            </a>
-            <a href="/aws-customers" className="right-nav-button">
+            </Link>
+            <Link to="/aws-customers" className="right-nav-button">
               Who Uses AWS
-            </a>
-            <a href="/aws-infrastructure" className="right-nav-button">
+            </Link>
+            <Link to="/aws-infrastructure" className="right-nav-button">
               AWS Infrastructure (Region/AZ/DC)
-            </a>
-            <a href="/dco-importance" className="right-nav-button">
+            </Link>
+            <Link to="/dco-importance" className="right-nav-button">
               Why DCO Job is Important
-            </a>
+            </Link>
           </div>
         </div>
       </div>

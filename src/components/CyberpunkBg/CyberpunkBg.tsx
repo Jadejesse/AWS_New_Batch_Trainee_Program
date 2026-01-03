@@ -2,8 +2,12 @@ import React from 'react';
 import '../../styles/cyberpunk-bg.css';
 
 const CyberpunkBg: React.FC = () => {
+  const cyberBg = `${import.meta.env.BASE_URL}Cyber.png`;
   return (
-    <div className="cyberpunk-bg">
+    <div
+      className="cyberpunk-bg"
+      style={{ ['--cyber-bg' as any]: `url('${cyberBg}')` }}
+    >
       <div className="neon-grid"></div>
       <div className="scan-lines"></div>
       

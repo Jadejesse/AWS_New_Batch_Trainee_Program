@@ -3,6 +3,7 @@ import './Avatar.css';
 
 const Avatar: React.FC = () => {
   const [currentAvatar, setCurrentAvatar] = useState(1);
+  const base = import.meta.env.BASE_URL || '/';
 
   const toggleAvatar = () => {
     setCurrentAvatar(prev => prev === 1 ? 2 : 1);
@@ -11,7 +12,7 @@ const Avatar: React.FC = () => {
   return (
     <div className="avatar-container" onClick={toggleAvatar}>
       <img 
-        src={currentAvatar === 1 ? '/Makima_avatar.jpg' : '/Reze_Avatar.jpg'} 
+        src={currentAvatar === 1 ? `${base}Makima_avatar.jpg` : `${base}Reze_Avatar.jpg`} 
         alt="Avatar" 
         className="avatar-image"
       />

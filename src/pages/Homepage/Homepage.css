@@ -1,7 +1,7 @@
 .homepage {
   min-height: 100vh;
   background-color: #2C3E50;
-  background-image: url('/Homepage_image.png');
+  background-image: var(--homepage-bg, url('/Homepage_image.png'));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

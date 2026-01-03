@@ -9,9 +9,9 @@ import AwsInfrastructure from './pages/AwsInfrastructure/AwsInfrastructure'
 import PageTransition from './components/PageTransition/PageTransition'
 
 function App() {
-  // Use basename only in production (GitHub Pages)
-  const basename = import.meta.env.MODE === 'production' ? '/AWS_New_Batch_Trainee_Program' : ''
-  
+  // Use Vite base for GitHub Pages; strip trailing slash for BrowserRouter
+  const basename = (import.meta.env.BASE_URL || '').replace(/\/$/, '')
+
   return (
     <Router basename={basename}>
       <PageTransition>
