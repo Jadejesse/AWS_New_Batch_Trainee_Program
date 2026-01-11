@@ -50,6 +50,9 @@ const InfoPanel: React.FC = () => {
 
       {/* Navigation Buttons - Vertical */}
       <div className="nav-buttons">
+        <Link to="/what-is-cloud" className="nav-button" onClick={handleNavClick}>
+          What is Cloud
+        </Link>
         <Link to="/aws-vs-amazon" className="nav-button" onClick={handleNavClick}>
           AWS VS Amazon
         </Link>

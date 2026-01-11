@@ -1,0 +1,173 @@
+.hud-notification-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    animation: overlayFade 0.5s ease;
+}
+
+.hud-notification-container {
+    text-align: center;
+    padding: 3rem 6rem;
+    background: rgba(0, 240, 255, 0.05);
+    border-top: 2px solid #00f0ff;
+    border-bottom: 2px solid #00f0ff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(0, 240, 255, 0.2);
+}
+
+.hud-title {
+    font-size: 5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 12px;
+    margin: 0;
+    position: relative;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.hud-sub {
+    font-size: 1.5rem;
+    color: #00f0ff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 1rem;
+    opacity: 0.8;
+    animation: pulse 1s infinite;
+}
+
+.hud-bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hud-bar {
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #00f0ff;
+    top: 0;
+    box-shadow: 0 0 15px #00f0ff;
+}
+
+.hud-bar.left {
+    left: 10%;
+}
+
+.hud-bar.right {
+    right: 10%;
+}
+
+@keyframes overlayFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* Glitch Effect */
+.hud-title::before,
+.hud-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.hud-title::before {
+    left: 2px;
+    text-shadow: -2px 0 #ff00ff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.hud-title::after {
+    left: -2px;
+    text-shadow: -2px 0 #00f0ff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(31px, 9999px, 94px, 0);
+    }
+
+    20% {
+        clip: rect(62px, 9999px, 42px, 0);
+    }
+
+    40% {
+        clip: rect(16px, 9999px, 78px, 0);
+    }
+
+    60% {
+        clip: rect(58px, 9999px, 83px, 0);
+    }
+
+    80% {
+        clip: rect(85px, 9999px, 12px, 0);
+    }
+
+    100% {
+        clip: rect(2px, 9999px, 55px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0);
+    }
+
+    20% {
+        clip: rect(45px, 9999px, 15px, 0);
+    }
+
+    40% {
+        clip: rect(78px, 9999px, 60px, 0);
+    }
+
+    60% {
+        clip: rect(22px, 9999px, 90px, 0);
+    }
+
+    80% {
+        clip: rect(10px, 9999px, 33px, 0);
+    }
+
+    100% {
+        clip: rect(88px, 9999px, 4px, 0);
+    }
+}

@@ -1,0 +1,100 @@
+.cyber-hud-container {
+    position: relative;
+    padding: 4px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: visible;
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cyber-hud-container.active {
+    background: rgba(0, 240, 255, 0.05);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1),
+        inset 0 0 15px rgba(0, 240, 255, 0.05);
+}
+
+.cyber-hud-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cyber-hud-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Corner Decorations */
+.corner-decor {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-color: #00f0ff;
+    border-style: solid;
+    opacity: 0.5;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.cyber-hud-container.active .corner-decor {
+    opacity: 1;
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+.top-left {
+    top: -2px;
+    left: -2px;
+    border-width: 3px 0 0 3px;
+    border-top-left-radius: 8px;
+}
+
+.top-right {
+    top: -2px;
+    right: -2px;
+    border-width: 3px 3px 0 0;
+    border-top-right-radius: 8px;
+}
+
+.bottom-left {
+    bottom: -2px;
+    left: -2px;
+    border-width: 0 0 3px 3px;
+    border-bottom-left-radius: 8px;
+}
+
+.bottom-right {
+    bottom: -2px;
+    right: -2px;
+    border-width: 0 3px 3px 0;
+    border-bottom-right-radius: 8px;
+}
+
+/* Scanline Effect on Active */
+.cyber-hud-container.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.1;
+    z-index: 0;
+}

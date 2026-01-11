@@ -1,0 +1,195 @@
+.what-is-cloud {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0.5rem 2rem 2rem 2rem;
+  background: transparent;
+  animation: fadeIn 0.5s ease-out;
+  color: white;
+  overflow: hidden;
+}
+
+/* Reuse styles from WhatIsAws.css but simplified/adapted */
+.back-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.what-is-cloud h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+/* Key Definition */
+.key-definition {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.key-definition h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00f0ff;
+}
+
+.definition-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* Analogy Section */
+.analogy-section {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.analogy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.analogy-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.analogy-card.highlight {
+  border-color: #00f0ff;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.result {
+  margin-top: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.result.bad { color: #ff6b6b; background: rgba(255, 107, 107, 0.1); }
+.result.good { color: #4ade80; background: rgba(74, 222, 128, 0.1); }
+
+/* Service Models */
+.service-models {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.model-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.model-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.model-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.model-full {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.model-desc {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.example {
+  font-weight: 700;
+  color: #00f0ff;
+}
+
+/* Deployment Models */
+.deployment-models {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.deployment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.deployment-card {
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deployment-card.highlight {
+  border-color: #ff00ff;
+}
+
+/* Advantages Section */
+.advantages-section {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1rem;
+}
+
+.advantage-item {
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .what-is-cloud h1 { font-size: 2rem; }
+  .advantages-list { grid-template-columns: 1fr; }
+}

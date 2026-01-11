@@ -6,6 +6,7 @@ import AwsServices from './pages/AwsServices/AwsServices'
 import DcoImportance from './pages/DcoImportance/DcoImportance'
 import AwsCustomers from './pages/AwsCustomers/AwsCustomers'
 import AwsInfrastructure from './pages/AwsInfrastructure/AwsInfrastructure'
+import WhatIsCloud from './pages/WhatIsCloud/WhatIsCloud'
 import PageTransition from './components/PageTransition/PageTransition'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/aws-vs-amazon" element={<AwsVsAmazon />} />
+          <Route path="/what-is-cloud" element={<WhatIsCloud />} />
           <Route path="/what-is-aws" element={<WhatIsAws />} />
           <Route path="/aws-services" element={<AwsServices />} />
           <Route path="/aws-customers" element={<AwsCustomers />} />
